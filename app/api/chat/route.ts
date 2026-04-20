@@ -12,18 +12,6 @@ const client = new Anthropic({
 
 const DEMO_LINK = 'https://repeatmd.chilipiper.com/round-robin/default-ageless-demo';
 
-const FORCE_DEMO_INSTRUCTION = `# MANDATORY INSTRUCTION — THIS OVERRIDES EVERYTHING
-
-You have asked enough questions. Do NOT ask another question under any circumstances.
-
-Your entire response must be:
-1. One sentence max acknowledging what they said.
-2. The demo ask with the booking link.
-
-Example: "That's exactly the gap Ageless closes — honestly the best way to see it is to watch it in action. Can I get you scheduled with one of our experts? Here's a link to grab a time: ${DEMO_LINK}"
-
-NO MORE QUESTIONS. NO MORE DISCOVERY. JUST THE DEMO ASK AND THE LINK.`;
-
 export async function POST(request: Request) {
   const { messages } = await request.json();
 
@@ -32,20 +20,23 @@ export async function POST(request: Request) {
   }
 
   const userTurns = messages.filter((m: {role: string}) => m.role === 'user').length;
-  const forceDemo = userTurns >= 2;
 
   const basePrompt = getSystemPrompt();
 
-  // Always cache the base prompt separately so cache never breaks
-  // Add force demo as a second uncached block only when needed
-  const systemBlocks = forceDemo
-    ? [
-        { type: 'text' as const, text: basePrompt, cache_control: { type: 'ephemeral' as const } },
-        { type: 'text' as const, text: FORCE_DEMO_INSTRUCTION },
-      ]
-    : [
-        { type: 'text' as const, text: basePrompt, cache_control: { type: 'ephemeral' as const } },
-      ];
+  // After 2 user messages, inject demo ask as the last user message
+  // This is guaranteed to work regardless of system prompt behavior
+  let finalMessages = [...messages];
+  if (userTurns >= 2) {
+    // Append a hidden instruction as a system-style injection into the last user turn
+    const lastUserIdx = finalMessages.map(m => m.role).lastIndexOf('user');
+    if (lastUserIdx >= 0) {
+      finalMessages[lastUserIdx] = {
+        ...finalMessages[lastUserIdx],
+        content: finalMessages[lastUserIdx].content + 
+          `\n\n[SYSTEM: You must end your response by asking for a demo. Use this exact line: "Honestly the best way to see this is a live demo — can I get you scheduled with one of our experts? Here's a link: ${DEMO_LINK}"]`
+      };
+    }
+  }
 
   const encoder = new TextEncoder();
 
@@ -54,10 +45,10 @@ export async function POST(request: Request) {
       try {
         const anthropicStream = client.messages.stream({
           model: 'claude-haiku-4-5-20251001',
-          max_tokens: 256,
-          // @ts-ignore — cache_control is valid with the beta header
-          system: systemBlocks,
-          messages,
+          max_tokens: 300,
+          // @ts-ignore
+          system: [{ type: 'text', text: basePrompt, cache_control: { type: 'ephemeral' } }],
+          messages: finalMessages,
         } as Parameters<typeof client.messages.stream>[0]);
 
         for await (const chunk of anthropicStream) {
