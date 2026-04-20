@@ -5,6 +5,9 @@ export const runtime = 'nodejs';
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
+  defaultHeaders: {
+    'anthropic-beta': 'prompt-caching-2024-07-31',
+  },
 });
 
 const DEMO_LINK = 'https://repeatmd.chilipiper.com/round-robin/default-ageless-demo';
@@ -34,7 +37,8 @@ export async function POST(request: Request) {
   const userTurns = messages.filter((m: {role: string}) => m.role === 'user').length;
   const forceDemo = userTurns >= 2;
 
-  const systemPrompt = getSystemPrompt() + (forceDemo ? FORCE_DEMO_INSTRUCTION : '');
+  const basePrompt = getSystemPrompt();
+  const systemPrompt = forceDemo ? basePrompt + FORCE_DEMO_INSTRUCTION : basePrompt;
 
   const encoder = new TextEncoder();
 
@@ -48,6 +52,7 @@ export async function POST(request: Request) {
             {
               type: 'text',
               text: systemPrompt,
+              // @ts-ignore
               cache_control: { type: 'ephemeral' },
             }
           ],
@@ -75,8 +80,6 @@ export async function POST(request: Request) {
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
       'Transfer-Encoding': 'chunked',
-      'X-Content-Type-Options': 'nosniff',
-      'anthropic-beta': 'prompt-caching-2024-07-31',
     },
   });
 }
