@@ -31,7 +31,6 @@ export async function POST(request: Request) {
     return new Response('Invalid messages', { status: 400 });
   }
 
-  // Count user turns — after 3, force the demo ask
   const userTurns = messages.filter((m: {role: string}) => m.role === 'user').length;
   const forceDemo = userTurns >= 3;
 
@@ -45,9 +44,15 @@ export async function POST(request: Request) {
         const anthropicStream = client.messages.stream({
           model: 'claude-haiku-4-5-20251001',
           max_tokens: 256,
-          system: systemPrompt,
+          system: [
+            {
+              type: 'text',
+              text: systemPrompt,
+              cache_control: { type: 'ephemeral' },
+            }
+          ],
           messages,
-        });
+        } as Parameters<typeof client.messages.stream>[0]);
 
         for await (const chunk of anthropicStream) {
           if (
@@ -71,6 +76,7 @@ export async function POST(request: Request) {
       'Content-Type': 'text/plain; charset=utf-8',
       'Transfer-Encoding': 'chunked',
       'X-Content-Type-Options': 'nosniff',
+      'anthropic-beta': 'prompt-caching-2024-07-31',
     },
   });
 }
