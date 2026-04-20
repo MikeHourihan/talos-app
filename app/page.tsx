@@ -15,6 +15,7 @@ function renderMessage(text: string) {
   // Replace any placeholder variations with real link
   const cleaned = text
     .replace(/\[ChiliPiper scheduling link\]/gi, CHILIPIPER_LINK)
+    .replace(/\[ChiliPiper link\]/gi, CHILIPIPER_LINK)
     .replace(/\[scheduling link\]/gi, CHILIPIPER_LINK)
     .replace(/\[booking link\]/gi, CHILIPIPER_LINK)
     .replace(/\[link\]/gi, CHILIPIPER_LINK);
