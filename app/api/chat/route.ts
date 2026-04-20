@@ -32,7 +32,7 @@ export async function POST(request: Request) {
   }
 
   const userTurns = messages.filter((m: {role: string}) => m.role === 'user').length;
-  const forceDemo = userTurns >= 3;
+  const forceDemo = userTurns >= 2;
 
   const systemPrompt = getSystemPrompt() + (forceDemo ? FORCE_DEMO_INSTRUCTION : '');
 
