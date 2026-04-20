@@ -9,6 +9,25 @@ interface Message {
 }
 
 const OPENING_MESSAGE = "Hey — questions about Ageless? Happy to walk you through it.";
+const CHILIPIPER_LINK = "https://repeatmd.chilipiper.com/round-robin/default-ageless-demo";
+
+function renderMessage(text: string) {
+  // Replace any placeholder variations with real link
+  const cleaned = text
+    .replace(/\[ChiliPiper scheduling link\]/gi, CHILIPIPER_LINK)
+    .replace(/\[scheduling link\]/gi, CHILIPIPER_LINK)
+    .replace(/\[booking link\]/gi, CHILIPIPER_LINK)
+    .replace(/\[link\]/gi, CHILIPIPER_LINK);
+
+  // Split on URLs and render them as clickable links
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = cleaned.split(urlRegex);
+  return parts.map((part, i) =>
+    urlRegex.test(part)
+      ? <a key={i} href={part} target="_blank" rel="noopener noreferrer" style={{color: 'var(--gold)', textDecoration: 'underline', wordBreak: 'break-all'}}>{part}</a>
+      : part
+  );
+}
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -264,7 +283,7 @@ export default function Home() {
             {messages.map((msg, i) => (
               <div key={i} className={`${styles.msgRow} ${msg.role === 'user' ? styles.msgUser : styles.msgAssistant}`}>
                 <div className={styles.msgBubble}>
-                  {msg.content || (isStreaming && i === messages.length - 1 ? (
+                  {msg.content ? renderMessage(msg.content) : (isStreaming && i === messages.length - 1 ? (
                     <span className={styles.typingDots}>
                       <span /><span /><span />
                     </span>
