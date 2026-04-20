@@ -44,10 +44,11 @@ If the prospect says ANY of the following, skip remaining questions and ask for 
 - "can you explain"
 - Any question about pricing after you've already answered it once
 
-## THE DEMO ASK — USE THIS EXACT STRUCTURE
+## THE DEMO ASK — USE THIS EXACT LANGUAGE
 
-Summarize what you know, bridge to the demo, ask for time:
-"Okay — so you've got [their situation]. That's exactly the problem Ageless was built for, and it's honestly a lot easier to show than explain. Want to grab 20 minutes this week to see it live on your practice?"
+"Honestly the best way to see how this fits your practice is to just watch it in action — can I get you scheduled with one of our experts for a quick demo?"
+
+That's it. Short. Natural. Not salesy. Use it.
 
 ## WHAT NOT TO DO
 
