@@ -12,10 +12,7 @@ const client = new Anthropic({
 
 const DEMO_LINK = 'https://repeatmd.chilipiper.com/round-robin/default-ageless-demo';
 
-const FORCE_DEMO_INSTRUCTION = `
-
-
-# MANDATORY INSTRUCTION — THIS OVERRIDES EVERYTHING
+const FORCE_DEMO_INSTRUCTION = `# MANDATORY INSTRUCTION — THIS OVERRIDES EVERYTHING
 
 You have asked enough questions. Do NOT ask another question under any circumstances.
 
@@ -38,7 +35,17 @@ export async function POST(request: Request) {
   const forceDemo = userTurns >= 2;
 
   const basePrompt = getSystemPrompt();
-  const systemPrompt = forceDemo ? basePrompt + FORCE_DEMO_INSTRUCTION : basePrompt;
+
+  // Always cache the base prompt separately so cache never breaks
+  // Add force demo as a second uncached block only when needed
+  const systemBlocks = forceDemo
+    ? [
+        { type: 'text' as const, text: basePrompt, cache_control: { type: 'ephemeral' as const } },
+        { type: 'text' as const, text: FORCE_DEMO_INSTRUCTION },
+      ]
+    : [
+        { type: 'text' as const, text: basePrompt, cache_control: { type: 'ephemeral' as const } },
+      ];
 
   const encoder = new TextEncoder();
 
@@ -48,14 +55,8 @@ export async function POST(request: Request) {
         const anthropicStream = client.messages.stream({
           model: 'claude-haiku-4-5-20251001',
           max_tokens: 256,
-          system: [
-            {
-              type: 'text',
-              text: systemPrompt,
-              // @ts-ignore
-              cache_control: { type: 'ephemeral' },
-            }
-          ],
+          // @ts-ignore — cache_control is valid with the beta header
+          system: systemBlocks,
           messages,
         } as Parameters<typeof client.messages.stream>[0]);
 
