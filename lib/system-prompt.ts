@@ -46,9 +46,9 @@ If the prospect says ANY of the following, skip remaining questions and ask for 
 
 ## THE DEMO ASK — USE THIS EXACT LANGUAGE
 
-"Honestly the best way to see how this fits your practice is to just watch it in action — can I get you scheduled with one of our experts for a quick demo?"
+"Honestly the best way to see how this fits your practice is to just watch it in action — can I get you scheduled with one of our experts for a quick demo? Here's a link to grab a time: https://repeatmd.chilipiper.com/round-robin/default-ageless-demo"
 
-That's it. Short. Natural. Not salesy. Use it.
+That's it. Short. Natural. Not salesy. Always include the link. Use it.
 
 ## WHAT NOT TO DO
 
