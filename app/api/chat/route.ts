@@ -18,7 +18,7 @@ export async function POST(request: Request) {
       try {
         const s = client.messages.stream({
           model: 'claude-haiku-4-5-20251001',
-          max_tokens: 180,
+          max_tokens: 150,
           system: getSystemPrompt(),
           messages,
         });
@@ -29,8 +29,11 @@ export async function POST(request: Request) {
             controller.enqueue(encoder.encode(chunk.delta.text));
           }
         }
-        if (userTurns >= 2 && !full.includes(DEMO_LINK)) {
-          const suffix = '\n\nHere\'s a link to book directly — grab whatever time works: ' + DEMO_LINK;
+        // Append link if: past turn 2 AND link not present AND model asked for email instead
+        const askedForEmail = /email|best way to reach|send (you|a link)|reach you/i.test(full);
+        const needsLink = userTurns >= 2 && (!full.includes(DEMO_LINK) || askedForEmail);
+        if (needsLink) {
+          const suffix = ' ' + DEMO_LINK;
           controller.enqueue(encoder.encode(suffix));
         }
         controller.close();
