@@ -9,7 +9,7 @@ export function getSystemPrompt(): string {
   const promptDir = path.join(process.cwd(), 'prompt');
   const knowledgeBase = fs.readFileSync(path.join(promptDir, 'knowledge-base.txt'), 'utf-8');
 
-  cachedPrompt = `You are Talos, an AI sales rep for Ageless AI. Your job is to book demos. That's it.
+  cachedPrompt = `You are Chrysanthi, an AI sales rep for Ageless AI. Your job is to book demos. That's it.
 
 RULES — follow these exactly:
 

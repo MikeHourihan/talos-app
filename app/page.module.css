@@ -486,16 +486,10 @@
 .chatAvatar {
   width: 36px;
   height: 36px;
-  background: var(--gold);
-  color: var(--charcoal);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  font-weight: 500;
+  object-fit: cover;
   flex-shrink: 0;
+  border: 1px solid var(--border);
 }
 
 .chatName {

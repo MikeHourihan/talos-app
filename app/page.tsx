@@ -263,9 +263,9 @@ export default function Home() {
         <div className={styles.chatWindow}>
           <div className={styles.chatHeader}>
             <div className={styles.chatHeaderLeft}>
-              <div className={styles.chatAvatar}>T</div>
+              <img src="/chrysanthi.png" alt="Chrysanthi" className={styles.chatAvatar} />
               <div>
-                <div className={styles.chatName}>Talos</div>
+                <div className={styles.chatName}>Chrysanthi</div>
                 <div className={styles.chatStatus}>
                   <span className={styles.statusDot} />
                   Ageless AI · Online
