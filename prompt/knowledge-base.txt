@@ -196,9 +196,15 @@ Pricing & Commitment
 "It's too expensive."
 ▶
 You pay $7-10 per patient visualized. When that patient closes, they're worth $3,000-$5,000 in revenue. If Ageless helps close just two extra patients per month, the subscription pays for itself many times over. And the first month is $499 with unlimited patients — real volume, real test, no cap, no risk of running out of room to prove it.
+For prospects who want to run their own numbers:
+ageless-gain-calculator.lovable.app
+lets them plug in conservative conversion rates and still see the math work at their specific price point and visit frequency.
 "I need to see ROI before committing."
 ▶
 That's exactly what the first month is designed for. At $499 with unlimited patients, you have everything you need to put it to a real test. If Ageless doesn't prove itself in 30 days with real leads and real bookings, you can walk away. No contract, no risk, no artificial cap limiting how much you can actually test.
+If the prospect wants to model it before committing, send the interactive calculator:
+ageless-gain-calculator.lovable.app
+— they can plug in their own conversion rate, average visit value, and return frequency. Use it as a tool to surface their specific numbers, not as a promise.
 "Do you have a trial period or discount to get started?"
 ▶
 The unlimited first month at $499 is the trial — and it's better than a week-long free trial because you're seeing it work with your real patient base, not a sandboxed environment. You'll know within two weeks if it's driving bookings. If it's not, you cancel. No contract, no call required, cancel right in the product.
@@ -227,14 +233,20 @@ this tool, not against it.
 Product & Results
 5 objections — AI accuracy, comparisons, visualization realism, patient reactions
 ▶
+"I don't like the beauty score — that feels harsh to my patients."
+▶
+This one comes up often enough that it's worth leading with rather than waiting for the objection — especially for operators with a patient-empowerment brand voice. The answer is simple: the score is optional. You turn it off in settings, and the rest of the flow runs exactly the same. Becky (TOPS Medical Spa), Jess (Cosmetic Lounge), Mina (Lamb Medical) all preferred it off, and every one of them closed once they knew.
+The framing that lands fastest: "If your brand is 'we work with you on what you want, not what we think you need,' turn the score off — a lot of practices with your brand position do exactly that. The visualization, the AI recommendations, the full flow all still work. The score is the one piece that's values-dependent, so we made it configurable."
+That validates the prospect's values before giving the feature answer, which closes the loop faster than defending the score.
 "How accurate are the visualizations?"
 ▶
 They're clinically informed previews validated by our Medical Advisory Board — including Dr. Paul Nassif from Botched, Dr. Anil Rajani who's a Top 10 injector in America, and Dr. Shino Bay, the #1 Sculptra provider in the US. These are not beauty filters. The AI is trained on treatment data and reviewed by clinicians. We use the word "visualization" and "preview," not "results," because these are possibilities, not guarantees.
 "I'm worried the AI visualization sets expectations better than what I can actually deliver."
 ▶
 That's the sharpest version of this concern and the one that comes up on every clinician call — Brette, Wenzel, Elliot. The instinctive answer is to lead with credibility (advisory board, 15 physicians, "visualization not results" language) and all of that is true and worth saying. But it misses the actual reframe that converts this objection.
-The reframe:
+The reframe — especially sharp for MD-led practices on the "under promise, over deliver" philosophy (Mina, Jess, Laura, Wenzel):
 You're already having this conversation. Every patient who walks into your consultation arrives with a mental image of what they want. You just can't see it. You're managing expectations against an invisible target — which is the hardest version of the problem. Ageless doesn't introduce an expectation where none existed. It makes the patient's existing expectation visible, shared, and documented before they ever sit in your chair.
+For physicians committed to clinical honesty, this is the protection, not the threat: the under-promise philosophy works best when you know what the patient is expecting. Right now they arrive with a private, undocumented expectation; with Ageless they arrive with a shared, consent-documented one, and your consultation becomes about calibrating a known image rather than guessing at an invisible one. Your clinical integrity is preserved — the AI is the conversation starter, you remain the authority who shapes the treatment plan.
 That's the flip. Right now you're the only one in the room who can't see what the patient is picturing. With Ageless, you and the patient are looking at the same image, and
 you
 are the authority in the conversation about what's clinically achievable versus what the visualization shows. The consultation shifts from convincing a skeptical patient that something is possible to managing the enthusiasm of a patient who's already bought in. You go from defense to offense.
@@ -274,8 +286,16 @@ That's exactly the problem Ageless solves. The intelligent outreach layer follow
 Three reasons leads don't convert: they're not qualified, they're not emotionally committed, and nobody followed up fast enough. Ageless fixes all three. The AI visualization creates commitment before the consult. The 1-5 star scoring with income and job data tells your team who to call first. And intelligent outreach follows up automatically via text and email within minutes, not days. No more leads going cold because someone forgot to call back.
 🤝
 Trust & Credibility
-3 objections — proof, AI skepticism, patient concerns
+4 objections — proof, AI skepticism, patient concerns, exclusivity
 ▶
+"Do you sell this to practices within 10 or 15 miles of us? Is there market exclusivity?"
+▶
+Two-layer honest answer.
+Layer one:
+The tool is fully white-labeled to your practice — your logo, your colors, your link, your branded flow. Your patient experience is yours, not Ageless's. A competitor using the same underlying tool in your market would still be a completely different product from the patient's perspective because the branding, the service menu recommendations, the consultation language, and the lead capture all live under your brand.
+Layer two:
+There is a real first-mover advantage we're not shy about. The first practice in a local market to deploy Ageless creates the patient expectation that this is how aesthetic consultations work. Every competitor who adopts Ageless after you is chasing that expectation — they're not the ones who defined it. That first-mover window matters specifically in markets where competition is tight, and the founders club pricing with same-week onboarding exists to let you claim that position before your competitors do.
+We don't sell exclusivity contracts. We give you the tools to be the practice that made the tool matter in your market.
 "What are your conversion rates? Can you prove this works?"
 ▶
 We've been live for about a month, so our dataset is still growing — but the early results are strong. One practice sent their Ageless link to 100 existing patients in a single email. Twelve went through the full visualization. Seven of them booked treatments for services they'd never tried at that practice before — off one email. Another practice generated over $10,000 in same-day revenue from a single event where patients were passing phones around comparing beauty scores. And a third saw $7,500 in high-ticket bookings (Ulthera + injectables) from one consultation that started with the visualization.
@@ -450,12 +470,19 @@ Custom
 Custom per patient
 The ROI math:
 You pay $7-10 per patient visualized. When that patient closes, they're worth $3,000-$5,000. The ROI is 30x to 70x. If Ageless helps close just two extra patients per month, the subscription pays for itself many times over.
+Interactive ROI calculator
+Send this link when a prospect wants to run their own numbers. Three sliders: conversion rate, spend per visit, visits per year. Defaults show a 32x first-year return on Growth tier.
+Internal note — rep use only:
+The calculator defaults to a 15% assessment-to-booking conversion. This number has not been validated across a large dataset. If a prospect asks where the 15% comes from, do not defend it as a benchmark. Reframe: "That's where a well-executed program tends to land. The specific wins we have on record are Isabella's 7 of 12 close rate off a single email and Myleen's same-day $10K from one event. Your math will be different — that's what the sliders are for."
+Open calculator →
 Positioning the first month — on risk:
 "The first month is $499 with unlimited patients. You're not capped on volume, which means you get a real test — not a watered-down preview."
 Positioning the first month — on commitment:
 "Month-to-month after that. No contract. If it doesn't deliver, you cancel. There's no mechanism locking you in."
 Positioning the first month — on ROI:
 "If Ageless closes two extra patients in your first month, the math already works. Everything beyond that is upside."
+Sign-up-and-pause close (for prospects with deployment delays):
+"We can lock in founders club pricing today with card on call, then pause activation until your target date. Your 30-day unlimited clock starts when you're actually ready to deploy, not when you sign up. This is how practices with website redesigns, staff training, upcoming launches, or scheduled vacations commit to the pricing without losing value to the timing gap."
 Core messaging
 Tagline
 AI before and afters that book patients ready to buy.
@@ -479,20 +506,20 @@ $499 first month, unlimited patients.
 Full product. No contract. Month-to-month after that.
 The close
 You're already spending money to get patients in the door. Ageless makes sure the ones who arrive are ready to buy, tells you who to call first, and follows up automatically so nobody slips through.
+Close variants — pick the right one
+Waitlist hold.
+For prospects ready-in-principle but not ready-in-timing (hiring, travel, website unfinished). Sign up today, card on file, founders club swag/community immediate, activation delayed. 7+ documented wins.
+Sign-up-and-pause.
+Newer variant from Carrie/Stefanie follow-up. Activate the account, then pause billing at the end of month one if they haven't deployed yet. Fit: prospects with real operational readiness gaps who want in but can't start generating leads day one.
+Refund safety net.
+For soft-approval-gate closes (spouse, business partner, office manager review). "$499, if [person] hates it, we'll refund it." Converts approval dependency into low-risk test. Mandy / Vitality Health.
+Event deadline acceleration.
+When prospect has a live event in under a week. Escalate internally visibly on the call (Slack Phil/CTO live), compress the close into the same session. Dusan / deRMA.
+Founders club extension.
+For "let me think about it" with legitimate internal review timeline. VP-authority move: "The special runs through Friday, but if you can commit by Monday I can push it." Only for prospects with real intent. Michell / Cosmetic Surgical Arts.
 Advisory board — use aggressively
 Dr. Rajani
 — Top 10 injector in America, 753K followers.
 Dr. Shino Bay
 — #1 Sculptra provider in the US, 120K followers.
 Dr. Nassif
-— Beverly Hills, star of Botched, 1M followers.
-Words to use / avoid
-Use:
-visualization, preview, patients, before & after, qualified, clinically informed.
-Avoid:
-results, leads, transform, revolutionize, guaranteed, seamless, game-changing.
-Social Proof
-Beta testimonials from real practices — use these in outreach, objection handling, and closing conversations
-💰
-Revenue Impact
-"We sent an email to 100 VIP members — 6 clients booked services they'd never considered before, same day. That's over $10,500 in new revenue from a single campaign."
