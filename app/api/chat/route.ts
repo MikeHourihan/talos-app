@@ -46,8 +46,8 @@ export async function POST(request: Request) {
 
   // Build system prompt with demo push instruction if we're at turn 4+
   let systemPrompt = getSystemPrompt();
-  if (userTurns >= 4) {
-    systemPrompt += `\n\nIMPORTANT: You have done enough discovery. Your response must answer their last message in 1-2 sentences, then end with the demo ask. Example ending: "Honestly easier to show than explain — got 20 minutes for a quick walkthrough?" Do not ask another discovery question. Do not include any link yet.`;
+  if (userTurns >= 6) {
+    systemPrompt += `\n\nIMPORTANT: You have done enough discovery. Your response must answer their last message in 1-2 sentences, then end with the demo ask. Example ending: "Honestly, Ageless is easier to show than explain over chat — got 20 minutes for a quick walkthrough?" Do not ask another discovery question. Do not include any link yet.`;
   }
 
   const encoder = new TextEncoder();
