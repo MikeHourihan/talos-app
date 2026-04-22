@@ -13,12 +13,18 @@ const CHILIPIPER_LINK = "https://repeatmd.chilipiper.com/round-robin/default-age
 
 function renderMessage(text: string) {
   // Replace any placeholder variations with real link
-  const cleaned = text
+  let cleaned = text
     .replace(/\[ChiliPiper scheduling link\]/gi, CHILIPIPER_LINK)
     .replace(/\[ChiliPiper link\]/gi, CHILIPIPER_LINK)
     .replace(/\[scheduling link\]/gi, CHILIPIPER_LINK)
     .replace(/\[booking link\]/gi, CHILIPIPER_LINK)
     .replace(/\[link\]/gi, CHILIPIPER_LINK);
+
+  // Replace any hallucinated scheduling URLs with the real one
+  cleaned = cleaned.replace(
+    /https?:\/\/(?:www\.)?(?:calendly|calendar|book|schedule|cal|meet)\.[^\s)]+/gi,
+    CHILIPIPER_LINK
+  );
 
   // Split on URLs and render them as clickable links
   const urlRegex = /(https?:\/\/[^\s]+)/g;
