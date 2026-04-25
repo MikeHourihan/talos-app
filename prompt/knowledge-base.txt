@@ -187,7 +187,7 @@ Objection Handling
 Click any objection to expand the response
 💡
 Current offer:
-$499 first month, unlimited patients.
+Plans start at $499/month, month-to-month, no contract.
 Use this when addressing risk or commitment concerns — no volume cap means a real test, not a watered-down preview.
 💰
 Pricing & Commitment
@@ -195,13 +195,13 @@ Pricing & Commitment
 ▶
 "It's too expensive."
 ▶
-You pay $7-10 per patient visualized. When that patient closes, they're worth $3,000-$5,000 in revenue. If Ageless helps close just two extra patients per month, the subscription pays for itself many times over. And the first month is $499 with unlimited patients — real volume, real test, no cap, no risk of running out of room to prove it.
+You pay $7-10 per patient visualized. When that patient closes, they're worth $3,000-$5,000 in revenue. If Ageless helps close just two extra patients per month, the subscription pays for itself many times over. And the plans start at $499/month — real volume, real test, no cap, no risk of running out of room to prove it.
 "I need to see ROI before committing."
 ▶
-That's exactly what the first month is designed for. At $499 with unlimited patients, you have everything you need to put it to a real test. If Ageless doesn't prove itself in 30 days with real leads and real bookings, you can walk away. No contract, no risk, no artificial cap limiting how much you can actually test.
+That's exactly what the first month is designed for. At plans starting at $499/month, you have everything you need to put it to a real test. If Ageless doesn't prove itself in 30 days with real leads and real bookings, you can walk away. No contract, no risk, no artificial cap limiting how much you can actually test.
 "Do you have a trial period or discount to get started?"
 ▶
-The unlimited first month at $499 is the trial — and it's better than a week-long free trial because you're seeing it work with your real patient base, not a sandboxed environment. You'll know within two weeks if it's driving bookings. If it's not, you cancel. No contract, no call required, cancel right in the product.
+The $499/month plan is the trial — and it's better than a week-long free trial because you're seeing it work with your real patient base, not a sandboxed environment. You'll know within two weeks if it's driving bookings. If it's not, you cancel. No contract, no call required, cancel right in the product.
 "We tried something like this before."
 ▶
 Was it scoring your leads by income and intent? Was it auto-enrolling patients in a rewards program with a welcome credit? Was it showing Affirm financing alongside the visualization? Was it sending AI-powered text and email follow-up automatically? Ageless is a full qualification engine. Whatever you tried before almost certainly wasn't doing all of that in one place.
@@ -447,11 +447,11 @@ Watch for
 Surgical specialties especially — the liability concern is real. Acknowledge it directly, don't handwave. Remy's Dr. Wenzel call is the reference for how to run this conversation when it comes up live.
 Pattern example: Mari / SkinLab (partner not in room, Friday close depends on recording review)
 You pay $7-10 per patient visualized. When that patient closes, they're worth $3,000-$5,000. The ROI is 30x to 70x. If Ageless helps close just two extra patients per month, the subscription pays for itself many times over.
-Positioning the first month — on risk:
-"The first month is $499 with unlimited patients. You're not capped on volume, which means you get a real test — not a watered-down preview."
-Positioning the first month — on commitment:
+Positioning the entry plan — on risk:
+"The plans start at $499/month. You're not capped on volume, which means you get a real test — not a watered-down preview."
+Positioning the entry plan — on commitment:
 "Month-to-month after that. No contract. If it doesn't deliver, you cancel. There's no mechanism locking you in."
-Positioning the first month — on ROI:
+Positioning the entry plan — on ROI:
 "If Ageless closes two extra patients in your first month, the math already works. Everything beyond that is upside."
 Core messaging
 Tagline
@@ -472,7 +472,7 @@ Pre-visualized, scored, enriched patients. Not cold leads. Not form fills. Not s
 The credibility
 12 physicians. 2M+ followers. Dr. Nassif, Dr. Rajani, Dr. Shino Bay. Built by RepeatMD.
 The offer
-$499 first month, unlimited patients.
+Plans start at $499/month, month-to-month, no contract.
 Full product. No contract. Month-to-month after that.
 The close
 You're already spending money to get patients in the door. Ageless makes sure the ones who arrive are ready to buy, tells you who to call first, and follows up automatically so nobody slips through.
